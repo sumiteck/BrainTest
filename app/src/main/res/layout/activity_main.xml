@@ -72,6 +72,7 @@
         app:layout_constraintVertical_bias="0.077" />
 
     <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
         android:layout_width="364dp"
         android:layout_height="279dp"
         android:layout_marginStart="8dp"
@@ -92,11 +93,11 @@
             android:background="@android:color/holo_blue_bright"
 
             android:onClick="chooseAnswer"
-        android:tag="0"
-        android:text="3"
-        android:textSize="36sp"
-        app:layout_column="0"
-        app:layout_row="0" />
+            android:tag="0"
+            android:text="3"
+            android:textSize="36sp"
+            app:layout_column="0"
+            app:layout_row="0" />
 
         <Button
             android:id="@+id/grid2"
@@ -139,5 +140,20 @@
 
 
     </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="215dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Result"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sum"
+        app:layout_constraintVertical_bias="0.816" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
