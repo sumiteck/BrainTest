@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         grid2.setText(Integer.toString(answers.get(1)));
         grid3.setText(Integer.toString(answers.get(2)));
         grid4.setText(Integer.toString(answers.get(3)));
-        timer();
+
     }
 
     public void chooseAnswer(View view){
@@ -92,6 +92,8 @@ public class MainActivity extends AppCompatActivity {
             public void onFinish() {
                 timer.setTextSize(14);
                 timer.setText("done!");
+                result.setTextSize(14);
+                result.setText("Your Score: "+Integer.toString(score)+"/"+Integer.toString(numberOfQuestion));
             }
         }.start();
 
@@ -113,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
         grid3 = (Button) findViewById(R.id.grid3);
         grid4 = (Button) findViewById(R.id.grid4);
         generateQuest();
+        timer();
     }
 
 
